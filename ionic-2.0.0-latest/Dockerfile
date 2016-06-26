@@ -4,7 +4,7 @@ MAINTAINER Mark Watson <markwatsonatx@gmail.com>
 
 WORKDIR /ionic2
 
-ADD scripts/startup.sh ./
+ADD startup.sh ./
 
 RUN npm install -g cordova 
 RUN npm install -g ionic@beta

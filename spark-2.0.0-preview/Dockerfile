@@ -13,7 +13,7 @@ RUN apt-get -y install wget
 
 WORKDIR /spark
 
-ADD scripts/startup.sh ./
+ADD startup.sh ./
 
 RUN wget http://d3kbcqa49mib13.cloudfront.net/spark-2.0.0-preview-bin-hadoop2.7.tgz 
 RUN gunzip spark-2.0.0-preview-bin-hadoop2.7.tgz 

@@ -12,7 +12,7 @@ ENV PATH "/anaconda/bin:$PATH"
 
 RUN mkdir /usr/notebooks
 
-ADD scripts/startup.sh ./
+ADD startup.sh ./
 
 CMD ["/spark/startup.sh"]
 
