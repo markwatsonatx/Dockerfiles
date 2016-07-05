@@ -1,0 +1,17 @@
+{
+  "env": {
+    "SPARK_HOME": "/spark/spark-1.6.1-bin-hadoop2.6",
+    "PYTHON_EXEC": "python",
+    "PYTHONPATH": "/spark/spark-1.6.1-bin-hadoop2.6/python:/spark/spark-1.6.1-bin-hadoop2.6/python/lib/py4j-0.9-src.zip",
+    "__TOREE_SPARK_OPTS__": "",
+    "__TOREE_OPTS__": "",
+    "DEFAULT_INTERPRETER": "Scala"
+  },
+  "language": "scala",
+  "display_name": "Scala 2.10",
+  "argv": [
+    "/root/.local/share/jupyter/kernels/apache_toree_scala/bin/run.sh",
+    "--profile",
+    "{connection_file}"
+  ]
+}
