@@ -18,6 +18,8 @@ RUN mkdir /usr/notebooks
 WORKDIR /root/.local/share/jupyter/kernels
 RUN mkdir apache_toree_scala
 ADD apache_toree_scala ./apache_toree_scala
+RUN mkdir pyspark
+ADD pyspark ./pyspark
 
 WORKDIR /spark
 ADD startup.sh ./
