@@ -4,7 +4,7 @@ MAINTAINER Mark Watson <markwatsonatx@gmail.com>
 
 WORKDIR /spark
 
-RUN apt-get -y install make bzip2 curl libglib2.0-0 libxext6 libsm6 libxrender1 git
+RUN apt-get -y install bzip2 curl libglib2.0-0 libxext6 libsm6 libxrender1
 RUN wget http://repo.continuum.io/archive/Anaconda3-4.0.0-Linux-x86_64.sh
 RUN bash Anaconda3-4.0.0-Linux-x86_64.sh -b -p /anaconda
 RUN apt-get install -y libjansi-native-java libhawtjni-runtime-java libjansi-java
