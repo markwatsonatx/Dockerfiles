@@ -1,0 +1,19 @@
+{
+ "display_name": "Python 2",
+ "language": "python",
+ "argv": [
+  "python",
+  "-m",
+  "ipykernel",
+  "-f",
+  "{connection_file}"
+ ],
+ "env": {
+  "SPARK_HOME": "/spark/spark-1.6.1-bin-hadoop2.6",
+  "PYTHONPATH": "/spark/spark-1.6.1-bin-hadoop2.6/python/:/spark/spark-1.6.1-bin-hadoop2.6/python/lib/py4j-0.9-src.zip",
+  "PYTHONSTARTUP": "/spark/spark-1.6.1-bin-hadoop2.6/python/pyspark/shell.py",
+  "PYSPARK_SUBMIT_ARGS": "--master local[2] pyspark-shell",
+  "SPARK_DRIVER_MEMORY":"2G",
+  "SPARK_LOCAL_IP":"127.0.0.1"
+ }
+}
