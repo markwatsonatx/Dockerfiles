@@ -8,7 +8,7 @@
     "DEFAULT_INTERPRETER": "Scala"
   },
   "language": "scala",
-  "display_name": "Scala 2.10",
+  "display_name": "Scala 2.10 (Spark 1.6.1)",
   "argv": [
     "/root/.local/share/jupyter/kernels/apache_toree_scala/bin/run.sh",
     "--profile",
