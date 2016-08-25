@@ -10,6 +10,7 @@ RUN echo "debconf shared/accepted-oracle-license-v1-1 select true" | debconf-set
 RUN echo "debconf shared/accepted-oracle-license-v1-1 seen true" | debconf-set-selections
 RUN apt-get -y install oracle-java8-installer
 RUN apt-get -y install wget
+RUN apt-get -y install build-essential
 
 WORKDIR /spark
 
