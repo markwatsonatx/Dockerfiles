@@ -2,10 +2,7 @@ FROM markwatsonatx/swift:DEVELOPMENT-SNAPSHOT-2016-08-23-a
 MAINTAINER Mark Watson <markwatsonatx@gmail.com>
 
 RUN apt-get update
-RUN apt-get install -y nodejs
-RUN ln -s /usr/bin/nodejs /usr/bin/node
-RUN apt-get install -y npm
-RUN npm install -g nodemon
+RUN apt-get install -y inotify-tools
 
 RUN mkdir /kitura-sample
 WORKDIR /kitura-sample
