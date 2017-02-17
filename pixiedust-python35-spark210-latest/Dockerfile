@@ -1,11 +1,11 @@
-FROM markwatsonatx/pixiedust-base:latest
+FROM markwatsonatx/pixiedust-base-python35:latest
 
 MAINTAINER Mark Watson <markwatsonatx@gmail.com>
 
 RUN apt-get install -y git
 
 WORKDIR /
-RUN git clone -b install https://github.com/ibm-cds-labs/pixiedust 
+RUN git clone https://github.com/ibm-cds-labs/pixiedust 
 
 WORKDIR /pixiedust
 RUN pip install -e ./
