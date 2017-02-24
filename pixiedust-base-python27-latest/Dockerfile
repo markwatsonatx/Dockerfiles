@@ -14,6 +14,10 @@ RUN pip install --upgrade pip
 
 RUN mkdir /usr/notebooks
 
+RUN mkdir /root/.jupyter/
+WORKDIR /root/.jupyter/
+ADD jupyter_notebook_config.py ./
+
 WORKDIR /home/root
 ADD startup.sh ./
 
