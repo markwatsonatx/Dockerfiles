@@ -7,6 +7,7 @@ RUN apt-get --no-install-recommends -y install build-essential pkg-config erlang
 
 WORKDIR /couchdb
 
+ADD create_admin.sh ./
 ADD create_db.sh ./
 ADD startup.sh ./
 
