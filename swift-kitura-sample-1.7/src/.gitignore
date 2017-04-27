@@ -1,0 +1,5 @@
+.build
+.vagrant
+Packages
+*.pkg
+*.xcodeproj
