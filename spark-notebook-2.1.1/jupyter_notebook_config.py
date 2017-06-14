@@ -45,7 +45,7 @@
 #  Use '*' to allow any origin to access your server.
 #  
 #  Takes precedence over allow_origin_pat.
-#c.NotebookApp.allow_origin = ''
+c.NotebookApp.allow_origin = '*'
 
 ## Use a regular expression for the Access-Control-Allow-Origin header
 #  
@@ -249,7 +249,7 @@ c.NotebookApp.token = ''
 ## Whether to trust or not X-Scheme/X-Forwarded-Proto and X-Real-Ip/X-Forwarded-
 #  For headerssent by the upstream reverse proxy. Necessary if the proxy handles
 #  SSL
-#c.NotebookApp.trust_xheaders = False
+#c.NotebookApp.trust_xheaders = False 
 
 ## DEPRECATED, use tornado_settings
 #c.NotebookApp.webapp_settings = {}
