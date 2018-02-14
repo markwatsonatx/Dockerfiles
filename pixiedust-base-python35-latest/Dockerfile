@@ -1,4 +1,4 @@
-FROM continuumio/anaconda3:latest
+FROM continuumio/anaconda3:4.2.0
 
 MAINTAINER Mark Watson <markwatsonatx@gmail.com>
 
