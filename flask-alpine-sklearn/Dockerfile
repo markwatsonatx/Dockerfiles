@@ -1,4 +1,4 @@
-FROM markwatsonatx/spark-notebook:2.1.1
+FROM markwatsonatx/flask-alpine:latest
 
 RUN apk update && \
     apk add libc6-compat && \
@@ -7,5 +7,4 @@ RUN apk update && \
     pip3 install matplotlib && \
     pip3 install numpy && \
     pip3 install scipy && \
-    pip3 install scikit-learn && \
-    pip3 install watson-machine-learning-client
+    pip3 install scikit-learn

@@ -3,19 +3,19 @@ FROM java:openjdk-8u111-jre-alpine
 MAINTAINER Mark Watson <markwatsonatx@gmail.com>
 
 RUN apk add --no-cache bash \
-    python-dev \ 
+    python3-dev \ 
     build-base \
     freetype-dev \
     libxml2-dev \
     libxslt-dev
     
-RUN python -m ensurepip \
-  && pip install --upgrade pip \
-  && pip install jupyter \
-  && pip install bokeh \
-  && pip install matplotlib \
-  && pip install pandas \
-  && pip install requests
+RUN python3 -m ensurepip \
+  && pip3 install --upgrade pip \
+  && pip3 install jupyter \
+  && pip3 install bokeh \
+  && pip3 install matplotlib \
+  && pip3 install pandas \
+  && pip3 install requests
 
 RUN mkdir /root/.jupyter/
 WORKDIR /root/.jupyter/
@@ -23,7 +23,7 @@ COPY jupyter_notebook_config.py ./
 
 RUN mkdir -p /root/pixiedust/bin \
   && pip install pixiedust==1.1.7.1 \
-  && jupyter pixiedust install --silent --spark=1.6.3 \
+  && jupyter pixiedust install --silent --spark=2.0.2 \
   && mkdir /usr/notebooks \
   && cp /root/pixiedust/notebooks/*.ipynb /usr/notebooks
 

@@ -21,8 +21,14 @@ RUN mkdir /root/.jupyter/
 WORKDIR /root/.jupyter/
 COPY jupyter_notebook_config.py ./
 
+WORKDIR /
+RUN apk add --no-cache git \
+  && git clone -b mw-working-branch https://github.com/ibm-cds-labs/pixiedust 
+
+WORKDIR /pixiedust
+RUN pip install -e ./
+
 RUN mkdir -p /root/pixiedust/bin \
-  && pip install pixiedust==1.1.7.1 \
   && jupyter pixiedust install --silent --spark=1.6.3 \
   && mkdir /usr/notebooks \
   && cp /root/pixiedust/notebooks/*.ipynb /usr/notebooks
@@ -33,6 +39,8 @@ RUN apk add --no-cache snappy \
     java-snappy-native
 RUN mkdir -p /root/pixiedust/data/libs
 RUN cp /usr/share/java/snappy-java.jar /root/pixiedust/data/libs
+
+RUN apk add --no-cache curl
 
 WORKDIR /
 COPY startup.sh ./
